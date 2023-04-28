@@ -6,6 +6,8 @@ body {
 body {
 	display: flex;
 	flex-direction: column;
+	font-family: AvenirNextCyr-Regular;
+	font-weight: 400;
 }
 
 .main {
@@ -13,7 +15,7 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 980px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
