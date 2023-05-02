@@ -1,2 +1,19 @@
 .title {
+	font-size: 55px;
+	text-transform: uppercase;
+	position: relative;
+
+	&::after {
+		content: "";
+		display: block;
+		background-color: #edcd1f;
+		width: 100px;
+		height: 10px;
+		position: absolute;
+		bottom: -25px;
+	}
+
+	&_left {
+		left: 1;
+	}
 }

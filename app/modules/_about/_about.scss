@@ -11,20 +11,25 @@
 		padding: 70px 0 50px 0;
 	}
 
-	&__production {
-		display: flex;
-		justify-content: space-between;
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15px;
 	}
 
-	&__item {
-		max-width: 300px;
+	&__descr {
+		background-color: #edcd1f;
+		font-family: AvenirNextCyr-Medium;
+		font-weight: 500;
+		font-size: 22px;
+		padding: 15px;
 	}
+
 	&__img {
 		object-fit: cover;
-		margin-bottom: 20px;
+		width: 100%;
 	}
-	&__list {
-	}
+
 	&__list-item {
 		background-color: #edcd1f;
 		font-size: 22px;
@@ -34,24 +39,61 @@
 			margin-bottom: 20px;
 		}
 	}
+
 	&__bot {
+		background-color: #f7f5f5;
+		position: relative;
 	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
 	&__info {
+		padding: 55px 0;
+		max-width: 445px;
+		width: 100%;
+		z-index: 1;
 	}
+
 	&__title {
+		margin-bottom: 75px;
 	}
+
 	&__slog {
+		font-size: 15px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 15px;
 	}
+
 	&__square {
+		font-weight: 700;
+		margin-bottom: 15px;
 	}
+
 	&__list-name {
+		font-weight: 700;
 	}
+
 	&__list-advant {
+		margin-bottom: 15px;
 	}
-	&__advantge {
-	}
+
 	&__text {
+		font-style: italic;
 	}
+
 	&__parallax {
+		background-image: url(../../images/about/parall.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1200px;
+		height: 100%;
 	}
 }
