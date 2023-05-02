@@ -5,6 +5,7 @@ body {
 
 body {
 	display: flex;
+	color: #3b3a3a;
 	flex-direction: column;
 	font-family: AvenirNextCyr-Regular;
 	font-weight: 400;
@@ -18,7 +19,12 @@ body {
 	max-width: 980px;
 	margin: 0 auto;
 	padding: 0 15px;
+
+	&_large {
+		max-width: 1180px;
+	}
 }
+
 
 .logo {
 	&__img {

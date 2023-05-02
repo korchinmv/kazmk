@@ -1,0 +1,25 @@
+.production {
+  padding: 60px 0 80px 0;
+}
+
+.production__title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.production__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.production__item {
+  max-height: 475px;
+  height: 100%;
+}
+
+.production__img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

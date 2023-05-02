@@ -13,7 +13,12 @@
 		bottom: -25px;
 	}
 
-	&_left {
+	&_left::after {
 		left: 1;
+	}
+
+	&_center::after {
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
