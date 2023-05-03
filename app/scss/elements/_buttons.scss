@@ -43,3 +43,18 @@
 		transform: scale(0);
 	}
 }
+
+.button-submit {
+	background-color: #3b3a3a;
+	color: #edcd1f;
+	font-family: AvenirNextCyr-Regular;
+	font-weight: 400;
+	padding: 10px 15px;
+	transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+
+
+	&:hover {
+		color: #3b3a3a;
+		background-color: #edcd1f;
+	}
+}

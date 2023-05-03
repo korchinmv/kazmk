@@ -1,4 +1,6 @@
 .email-form {
+  display: flex;
+  flex-direction: column;
   font-family: Georgia-Italic;
   width: 100%;
 
@@ -16,26 +18,25 @@
     padding: 3px 3px 3px 8px;
     margin-top: 10px;
     width: 100%;
+    height: 30px;
+
+    &:invalid {
+      border-color: red;
+    }
   }
 
   &__textarea {
     display: block;
     border: 1px solid #3b3a3a;
+    font-size: 15px;
     resize: none;
     padding: 12px 10px 3px 8px;
     width: 100%;
     height: 130px;
-    margin-bottom: 5px;
+    margin: 10px 0;
   }
 
   &__button {
-    color: #edcd1f;
-    background-color: #3b3a3a;
-    transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
-
-    &:hover {
-      color: #3b3a3a;
-    background-color: #edcd1f;
-    }
+    align-self: flex-end;
   }
 }

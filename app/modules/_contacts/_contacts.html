@@ -12,27 +12,29 @@
             href="tel:+77018464297">+7 701 846 42 97</a>. Или просто заполните форму ниже:</p>
 
         <form action="#" class="contacts__form email-form">
-          <label class="email-form__label" for="">
+          <label class="email-form__label" for="name">
             Имя
-            <input class="email-form__input" type="text" required>
+            <input class="email-form__input" name="name" id="name" type="text" maxlength="20" required>
           </label>
 
-          <label class="email-form__label" for="">
+          <label class="email-form__label" for="email">
             Эл. почта *
-            <input class="email-form__input" type="text" required>
+            <input class="email-form__input" name="email" id="email" type="email" maxlength="20" required>
           </label>
 
-          <label class="email-form__label" for="">
+          <label class="email-form__label" for="phone">
             Телефон
-            <input class="email-form__input" type="text" required>
+            <input class="email-form__input" name="phone" id="phone"
+              pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" type="tel"
+              required>
           </label>
 
-          <label for="">
+          <label for="textarea">
             Оставьте сообщение...
-            <textarea class="email-form__textarea" name="" id="" cols="30" rows="10"></textarea>
+            <textarea class="email-form__textarea" name="textarea" id="textarea" cols="30" rows="10"></textarea>
           </label>
 
-          <button class="email-form__button" type="submit">Отправить</button>
+          <button class="email-form__button button-submit" type="submit">Отправить</button>
         </form>
       </div>
 
