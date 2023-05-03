@@ -1,12 +1,14 @@
 .header {
-	display: flex;
+	background-color: #1e2d3b;
 	position: fixed;
 	width: 100%;
+	display: flex;
 	z-index: 2;
 
 	&__logo-block {
 		background-color: #edcd1f;
 		width: 332px;
+		height: 100px;
 		padding: 26px;
 		flex-shrink: 1;
 	}
@@ -30,10 +32,13 @@
 	&__menu-block {
 		display: flex;
 		align-items: center;
-		background-color: #1e2d3b;
+		justify-content: center;
 		flex-grow: 1;
 		flex-shrink: 0;
 		padding-right: 15px;
+		height: 100px;
+
+		
 	}
 
 	&__menu {
