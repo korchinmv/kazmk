@@ -24,7 +24,7 @@ function browsersync() {
 
 function styles() {
   return (
-    src("app/scss/*.scss", { sourcemaps: true })
+    src("app/scss/pages/*.scss", { sourcemaps: true })
       .pipe(scss({ outputStyle: "compressed" }))
       // .pipe(concat())
       .pipe(
