@@ -4,9 +4,20 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 27px 0;
+
+		@include mq("tablet", max) {
+			flex-direction: column;
+			align-items: start;
+		}
 	}
 
 	&__compamy {
 		font-size: 14px;
+		font-family: AvenirNextCyr-Medium;
+		font-weight: 500;
+
+		@include mq("tablet", max) {
+			margin-bottom: 10px;
+		}
 	}
 }

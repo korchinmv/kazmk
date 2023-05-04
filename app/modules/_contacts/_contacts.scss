@@ -64,3 +64,68 @@ iframe {
 .contacts__link {
 	font-weight: 500;
 }
+
+.email-form {
+	display: flex;
+	flex-direction: column;
+	font-family: Georgia-Italic;
+	width: 100%;
+
+	&__label {
+		display: block;
+
+		font-size: 13px;
+		margin-bottom: 27px;
+	}
+
+	&__input {
+		display: block;
+		border: 1px solid #3b3a3a;
+		font-size: 15px;
+		padding: 3px 3px 3px 8px;
+		margin-top: 10px;
+		width: 100%;
+		height: 35px;
+		outline: transparent;
+
+		&:hover {
+			border-width: 2px;
+		}
+
+		&:focus {
+			border-width: 2px;
+		}
+
+		&:valid {
+			border-color: #3b3a3a;
+		}
+
+		// &:invalid {
+		// 	border-color: red;
+		// }
+	}
+
+	&__textarea {
+		display: block;
+		border: 1px solid #3b3a3a;
+		font-size: 15px;
+		resize: none;
+		padding: 12px 10px 3px 8px;
+		width: 100%;
+		height: 130px;
+		margin: 10px 0;
+		outline: transparent;
+
+		&:hover {
+			border-width: 2px;
+		}
+
+		&:focus {
+			border-width: 2px;
+		}
+	}
+
+	&__button {
+		align-self: flex-end;
+	}
+}

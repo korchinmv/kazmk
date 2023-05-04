@@ -5,6 +5,14 @@
 	text-transform: uppercase;
 	position: relative;
 
+	@include mq("tablet", max) {
+		font-size: 45px;
+	}
+
+	@include mq("phone", max) {
+		font-size: 35px;
+	}
+
 	&::after {
 		content: "";
 		display: block;
@@ -13,6 +21,11 @@
 		height: 10px;
 		position: absolute;
 		bottom: -25px;
+
+		@include mq("phone", max) {
+			height: 7px;
+			bottom: -10px;
+		}
 	}
 
 	&_left::after {

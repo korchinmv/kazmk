@@ -9,6 +9,10 @@ body {
 	flex-direction: column;
 	font-family: AvenirNextCyr-Regular;
 	font-weight: 400;
+
+	@include mq("tablet", max) {
+		position: relative;
+	}
 }
 
 .main {
@@ -24,7 +28,6 @@ body {
 		max-width: 1180px;
 	}
 }
-
 
 .logo {
 	&__img {

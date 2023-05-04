@@ -6,13 +6,14 @@
 
 	@include mq("tablet", max) {
 		display: block;
+		z-index: 2;
 	}
 
 	&__line,
 	&:before,
 	&:after {
 		content: "";
-		background-color: #fff;
+		background-color: #3b3a3a;
 		position: absolute;
 		width: 100%;
 		height: 2px;
@@ -30,16 +31,19 @@
 	}
 
 	&--active::before {
+		background-color: #fff;
 		transform: rotate(45deg);
 		top: 21px;
 	}
 
 	&--active::after {
+		background-color: #fff;
 		transform: rotate(-45deg);
 		bottom: 21px;
 	}
 
 	&--active .burger__line {
+		background-color: #fff;
 		transform: scale(0);
 	}
 }
@@ -49,9 +53,8 @@
 	color: #edcd1f;
 	font-family: AvenirNextCyr-Regular;
 	font-weight: 400;
-	padding: 10px 15px;
+	padding: 8px 20px;
 	transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
-
 
 	&:hover {
 		color: #3b3a3a;

@@ -5,10 +5,23 @@
 		font-weight: 500;
 		text-align: center;
 		margin-bottom: 70px;
+
+		@include mq("tablet", max) {
+			margin-bottom: 50px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__top {
 		padding: 70px 0 50px 0;
+
+		@include mq("tablet", max) {
+			padding: 40px 0 30px 0;
+		}
 	}
 
 	&__grid {
@@ -16,6 +29,11 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 230px 1fr 1fr 1fr;
 		gap: 15px;
+
+		@include mq("tablet", max) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-auto-rows: 150px;
+		}
 	}
 
 	&__descr {
@@ -24,6 +42,10 @@
 		font-weight: 500;
 		font-size: 22px;
 		padding: 15px;
+
+		@include mq("phone", max) {
+			font-size: 21px;
+		}
 	}
 
 	&__img {
@@ -50,6 +72,10 @@
 	&__wrapper {
 		display: flex;
 		align-items: center;
+
+		@include mq("tablet", max) {
+			flex-direction: column;
+		}
 	}
 
 	&__info {
@@ -57,10 +83,32 @@
 		max-width: 445px;
 		width: 100%;
 		z-index: 1;
+		position: relative;
+
+		@include mq("tablet", max) {
+			padding: 40px 0;
+			order: 2;
+		}
+
+		@include mq("phone", max) {
+			padding: 20px 0;
+		}
 	}
 
 	&__title {
 		margin-bottom: 75px;
+
+		@include mq("tablet", max) {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		&:after {
+			@include mq("tablet", max) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
 	}
 
 	&__slog {
@@ -68,35 +116,72 @@
 		font-weight: 700;
 		text-align: center;
 		margin-bottom: 15px;
+
+		@include mq("phone", max) {
+			font-size: 12px;
+		}
 	}
 
 	&__square {
 		font-weight: 700;
 		margin-bottom: 15px;
+
+		@include mq("phone", max) {
+			font-size: 12px;
+		}
 	}
 
 	&__list-name {
 		font-weight: 700;
+
+		@include mq("phone", max) {
+			font-size: 12px;
+		}
 	}
 
 	&__list-advant {
 		margin-bottom: 15px;
+
+		@include mq("phone", max) {
+			font-size: 12px;
+		}
 	}
 
 	&__text {
 		font-style: italic;
+
+		@include mq("phone", max) {
+			font-size: 12px;
+		}
 	}
 
 	&__parallax {
 		background-image: url(../images/about/parall.jpg);
 		background-position: right;
 		background-repeat: no-repeat;
-		background-attachment:fixed;
-		background-size: contain;
+		background-attachment: fixed;
+		background-size: cover;
 		position: absolute;
 		right: 0;
 		top: 0;
+		bottom: 0;
 		width: 50vw;
 		height: 100%;
+
+		@include mq("tablet", max) {
+			background-attachment: local;
+			position: static;
+			height: 500px;
+			width: 100%;
+			order: 1;
+		}
+
+		@include mq("tablet-s", max) {
+			height: 300px;
+		}
+
+		@include mq("phone", max) {
+			height: 200px;
+		}
 	}
 }

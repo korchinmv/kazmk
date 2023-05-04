@@ -20,5 +20,34 @@
 		letter-spacing: 5px;
 		text-transform: uppercase;
 		margin-bottom: 60px;
+
+		@include mq("tablet", max) {
+			font-size: 40px;
+			margin-bottom: 40px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 30px;
+			margin-bottom: 30px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 23px;
+			margin-bottom: 20px;
+		}
+
+		@media screen and (max-width: 400px) {
+			font-size: 17px;
+		}
+	}
+
+	&__arrow {
+		@include mq("tablet-s", max) {
+			width: 44px;
+		}
+
+		@media screen and (max-width: 400px) {
+			width: 34px;
+		}
 	}
 }

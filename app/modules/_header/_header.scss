@@ -5,12 +5,22 @@
 	display: flex;
 	z-index: 2;
 
+	@include mq("tablet", max) {
+		flex-direction: column;
+	}
+
 	&__logo-block {
 		background-color: #edcd1f;
 		width: 332px;
 		height: 100px;
 		padding: 26px;
 		flex-shrink: 1;
+
+		@include mq("tablet", max) {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
 	}
 
 	&__logo {
@@ -27,6 +37,19 @@
 		line-height: 1;
 		text-transform: uppercase;
 		margin-left: 20px;
+
+		@include mq("desktop-s", max) {
+			font-size: 19px;
+		}
+
+		@include mq("tablet", max) {
+			width: 200px;
+		}
+
+		@include mq("phone", max) {
+			margin-left: 10px;
+			width: 180px;
+		}
 	}
 
 	&__menu-block {
@@ -38,7 +61,10 @@
 		padding-right: 15px;
 		height: 100px;
 
-		
+		@include mq("tablet", max) {
+			padding-right: 0;
+			height: 70px;
+		}
 	}
 
 	&__menu {
@@ -47,10 +73,42 @@
 		justify-content: center;
 		padding: 20px 0;
 		margin-right: 50px;
+
+		@include mq("tablet", max) {
+			position: absolute;
+			background-color: #1e2d3b;
+			left: 0;
+			top: 0;
+			right: 0;
+			flex-direction: column;
+			padding: 130px 0 80px;
+			justify-content: start;
+			transform: translateX(200%);
+			transition: transform 0.4s;
+			z-index: 1;
+			overflow: auto;
+			margin-right: 0;
+			height: 100vh;
+		}
+
+		&--active {
+			transform: translateX(0);
+			overflow-x: hidden;
+
+			.header__item {
+				transform: translateX(0);
+			}
+		}
 	}
 
 	&__item {
 		margin: 0 23px;
+
+		&:not(:last-child) {
+			@include mq("tablet", max) {
+				margin-bottom: 35px;
+			}
+		}
 	}
 
 	&__link {
@@ -60,6 +118,9 @@
 		transition: color 0.3s;
 		padding: 20px 0;
 
+		@include mq("tablet", max) {
+		}
+
 		&:hover {
 			color: #edcd1f;
 		}
@@ -67,5 +128,12 @@
 
 	&__instagram-link {
 		flex-shrink: 0;
+
+		img {
+			@include mq("tablet", max) {
+				width: 40px;
+				height: 40px;
+			}
+		}
 	}
 }
