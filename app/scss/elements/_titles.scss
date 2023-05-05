@@ -10,7 +10,7 @@
 	}
 
 	@include mq("phone", max) {
-		font-size: 35px;
+		font-size: 27px;
 	}
 
 	&::after {

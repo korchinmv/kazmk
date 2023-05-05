@@ -1,25 +1,50 @@
 .production {
-  padding: 60px 0 80px 0;
-}
+	padding: 60px 0 80px 0;
 
-.production__title {
-  text-align: center;
-  margin-bottom: 80px;
-}
+	@include mq("tablet", max) {
+		padding: 50px 0;
+	}
 
-.production__gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
+	@include mq("phone", max) {
+		padding: 30px 0 40px 0;
+	}
 
-.production__item {
-  max-height: 475px;
-  height: 100%;
-}
+	&__title {
+		text-align: center;
+		margin-bottom: 80px;
 
-.production__img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+		@include mq("tablet", max) {
+			margin-bottom: 60px;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__gallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+
+		@include mq("tablet-s", max) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+
+		@include mq("phone", max) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 15px;
+		}
+	}
+
+	&__img {
+		object-fit: cover;
+		height: 475px;
+		width: 100%;
+
+		@include mq("tablet-s", max) {
+			height: 320px;
+		}
+	}
 }

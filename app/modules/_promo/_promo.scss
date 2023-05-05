@@ -1,62 +1,121 @@
 .promo {
-  background-color: #edcd1f;
-
+	background-color: #edcd1f;
 }
 
 .promo__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include mq("tablet-s", max) {
+		justify-content: center;
+		padding: 30px;
+	}
+
+	@media screen and (max-width: 582px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0 10px 0;
+	}
 }
 
 .promo__item {
-  color: #3d5975;
-  text-align: center;
-  padding: 45px 0 55px 0;
-  flex: 0 1 33.33%;
+	text-align: center;
+	padding: 45px 0 55px 0;
+	flex: 0 1 33.33%;
+	min-width: 246px;
 
-&_decor {
-  position:relative;
-}
+	@include mq("tablet-s", max) {
+		margin-bottom: 25px;
+		padding: 0;
+	}
 
-&_decor::before {
-  content: "";
-  display: block;
-  background-color: #fff;
-  width: 2px;
-  height: 80px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%)
-}
+	@media screen and (max-width: 582px) {
+		width: 150px;
+	}
 
-&_decor::after {
-  content: "";
-  display: block;
-  background-color: #fff;
-  width: 2px;
-  height: 80px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%)
- }
+	&_decor {
+		position: relative;
+	}
+
+	&_decor::before {
+		content: "";
+		display: block;
+		background-color: #fff;
+		width: 2px;
+		height: 80px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&_decor::after {
+		content: "";
+		display: block;
+		background-color: #fff;
+		width: 2px;
+		height: 80px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&:nth-child(2) {
+		@include mq("tablet-s", max) {
+			&::before {
+				width: 80px;
+				height: 2px;
+				left: 50%;
+				top: -12px;
+				transform: translateX(-50%);
+			}
+
+			&::after {
+				width: 80px;
+				height: 2px;
+				left: 50%;
+				top: 105px;
+				transform: translateX(-50%);
+			}
+		}
+
+		@include mq("tablet-s", max) {
+			order: 3;
+		}
+
+		@media screen and (max-width: 582px) {
+			order: 0;
+
+			&::after {
+				top: 103px;
+			}
+		}
+	}
 }
 
 .promo__num,
 .promo__text {
-  font-family: AvenirNextCyr-Medium;
-  font-weight: 600;
+	color: #3d5975;
+	font-family: AvenirNextCyr-Medium;
+	font-weight: 600;
 }
 
 .promo__num {
-  display: inline-block;
-  font-size: 40px;
+	display: inline-block;
+	font-size: 40px;
+	margin-bottom: 15px;
 
-  margin-bottom: 15px;
+	@include mq("tablet", max) {
+		font-size: 29px;
+		margin-bottom: 5px;
+	}
 }
 
 .promo__text {
-  font-size: 22px;
+	font-size: 22px;
+
+	@include mq("phone", max) {
+		font-size: 20px;
+	}
 }

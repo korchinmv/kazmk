@@ -2,6 +2,14 @@
 	padding: 60px 0;
 	font-family: Helvetica;
 	font-weight: 400;
+
+	@include mq("tablet", max) {
+		padding: 40px 0;
+	}
+
+	@include mq("phone", max) {
+		padding: 30px 0;
+	}
 }
 
 .contacts__title {
@@ -12,33 +20,56 @@
 iframe {
 	height: 450px;
 	width: 100%;
+
+	@include mq("phone", max) {
+		height: 320px;
+	}
 }
 
 .contacts__map {
 	margin-bottom: 40px;
+
+	@include mq("phone", max) {
+		margin-bottom: 20px;
+	}
 }
 
 .contacts__bot {
 	display: flex;
 	justify-content: space-between;
+
+	@include mq("tablet-s", max) {
+		flex-direction: column;
+	}
 }
 
 .contacts__title-block {
 	font-size: 25px;
 	margin-bottom: 30px;
+
+	@include mq("phone", max) {
+		margin-bottom: 20px;
+	}
 }
 
 .contacts__form {
 	max-width: 425px;
 	width: 100%;
-	margin-right: 15px;
+	margin-right: 35px;
+
+	@include mq("tablet-s", max) {
+		margin: 0 0 30px 0;
+		max-width: 100%;
+	}
 }
 
 .contacts__text {
 	font-size: 17px;
 	margin-bottom: 50px;
-}
-.contacts__phone {
+
+	@include mq("phone", max) {
+		margin-bottom: 20px;
+	}
 }
 
 .contacts__info {
@@ -73,9 +104,12 @@ iframe {
 
 	&__label {
 		display: block;
-
 		font-size: 13px;
 		margin-bottom: 27px;
+
+		@include mq("phone", max) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__input {
@@ -95,14 +129,6 @@ iframe {
 		&:focus {
 			border-width: 2px;
 		}
-
-		&:valid {
-			border-color: #3b3a3a;
-		}
-
-		// &:invalid {
-		// 	border-color: red;
-		// }
 	}
 
 	&__textarea {
@@ -127,5 +153,9 @@ iframe {
 
 	&__button {
 		align-self: flex-end;
+
+		@include mq("tablet-s", max) {
+			align-self: self-start;
+		}
 	}
 }
