@@ -22,7 +22,6 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<title>Изготовление деталей из металла | KAZ Build Company | Казахстан</title>
-	<link rel="preload" href="fonts/AvenirNextCyr-Regular.woff2" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="css/index.min.css">
 </head>
 
@@ -30,7 +29,7 @@
 	<header class="header">
 
 	<div class="header__logo-block">
-		<a class="header__logo logo" href="#header">
+		<a class="header__logo logo" href="#hero">
 			<img class="logo" loading="lazy" src="images/logo.png" width="47" height="47" alt="Логотип компании KazMK">
 
 			<p class="header__text">Тоо "Kaz Build Company"</p>
@@ -43,11 +42,11 @@
 
 	<div class="header__menu-block">
 		<ul class="header__menu">
-			<li class="header__item"><a class="header__link" href="#">Главная</a></li>
-			<li class="header__item"><a class="header__link" href="#">Услуги</a></li>
-			<li class="header__item"><a class="header__link" href="#">О нас</a></li>
-			<li class="header__item"><a class="header__link" href="#">Производство</a></li>
-			<li class="header__item"><a class="header__link" href="#">Контакты</a></li>
+			<li class="header__item"><a class="header__link" href="#hero">Главная</a></li>
+			<li class="header__item"><a class="header__link" href="#about">Услуги</a></li>
+			<li class="header__item"><a class="header__link" href="#about-bot">О нас</a></li>
+			<li class="header__item"><a class="header__link" href="#production">Производство</a></li>
+			<li class="header__item"><a class="header__link" href="#contacts">Контакты</a></li>
 		</ul>
 
 		<a class="header__instagram-link" href="https://www.instagram.com/kazmk.krg/?hl=de" target="_blank">
@@ -56,18 +55,18 @@
 	</div>
 </header>
 	<main class="main">
-		<section class="hero">
+		<section class="hero" id="hero">
 	<div class="container">
 		<div class="hero__wrapper">
 			<h1 class="hero__title">Производство
 				металлоконструкций</h1>
-			<button class="hero__btn">
+			<a class="hero__ancor" href="#about">
 				<img class="hero__arrow" src="images/icons/arrow-down.webp" alt="Смотреть далее..">
-			</button>
+			</a>
 		</div>
 	</div>
 </section>
-		<section class="about">
+		<section class="about" id="about">
 	<div class="container">
 		<div class="about__top">
 			<p class="about_top-text">ТОО <span>«Kaz Build Company»</span> специализируется на производстве металлоконструкций
@@ -75,22 +74,22 @@
 				сложностей</p>
 
 			<di v class="about__grid">
-				<img class="about__img" src="images/about/grid-2.jpg" alt="Строительство">
-				<img class="about__img" src="images/about/grid-2.jpg" alt="Сварка">
-				<img class="about__img" src="images/about/grid-3.jpg" alt="Рабочий при деле">
-				<p class="about__descr">Здания и сооружения из металлоконструкций</p>
-				<p class="about__descr">Связи и прогоны</p>
-				<p class="about__descr">Различные металлические изделия (лестницы, двери, ограждения и т.д.)</p>
-				<p class="about__descr">Конструкции каркаса быстровозводимых зданий</p>
-				<p class="about__descr">Элементы фахверка</p>
-				<p class="about__descr">Арматурные каркасы </p>
-				<p class="about__descr">Колонны, Фермы и балки</p>
-				<p class="about__descr">Закладные детали</p>
-				<p class="about__descr">Плазменная резка листового металла, рубка, гибка</p>
+				<img class="about__img about__img_1" src="images/about/grid-2.jpg" alt="Строительство">
+				<img class="about__img about__img_2" src="images/about/grid-2.jpg" alt="Сварка">
+				<img class="about__img about__img_3" src="images/about/grid-3.jpg" alt="Рабочий при деле">
+				<p class="about__descr about__descr_1">Здания и сооружения из металлоконструкций</p>
+				<p class="about__descr about__descr_2">Связи и прогоны</p>
+				<p class="about__descr about__descr_3">Различные металлические изделия (лестницы, двери, ограждения и т.д.)</p>
+				<p class="about__descr about__descr_4">Конструкции каркаса быстровозводимых зданий</p>
+				<p class="about__descr about__descr_5">Элементы фахверка</p>
+				<p class="about__descr about__descr_6">Арматурные каркасы </p>
+				<p class="about__descr about__descr_7">Колонны, Фермы и балки</p>
+				<p class="about__descr about__descr_8">Закладные детали</p>
+				<p class="about__descr about__descr_9">Плазменная резка листового металла, рубка, гибка</p>
 		</div>
 	</div>
 
-	<div class="about__bot">
+	<div class="about__bot" id="about-bot">
 		<div class="container">
 			<div class="about__wrapper">
 				<div class="about__info">
@@ -145,7 +144,7 @@
     </ul>
   </div>
 </div>
-		<section class="production">
+		<section class="production" id="production">
 	<div class="container container_large">
 		<h2 class="production__title title title_center">Производство</h2>
 
@@ -196,7 +195,7 @@
     </p>
   </div>
 </section>
-		<section class="contacts">
+		<section class="contacts" id="contacts">
 	<div class="container">
 		<h2 class="contacts__title title title_center">Контакты</h2>
 
@@ -273,6 +272,9 @@
 	</div>
 
 </footer>
+	<a class="button-back" href="#hero">
+	<img class="button-back__img" src="images/icons/arrow-down.webp" alt="Стрелка вверх">
+</a>
 	<script src="js/main.min.js"></script>
 </body>
 

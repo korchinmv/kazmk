@@ -9,7 +9,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		padding: 320px 0 450px 0;
+
+		@include mq("phone", max) {
+			padding-top: 490px;
+		}
 	}
 
 	&__title {

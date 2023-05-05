@@ -1,0 +1,24 @@
+.button-back {
+	background-color: #111a22;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 30px;
+	bottom: 150px;
+	z-index: 1;
+
+	@include mq("tablet", max) {
+		display: flex;
+	}
+
+	&__img {
+		transform: rotate(180deg);
+		object-fit: contain;
+		width: 20px;
+		height: 60px;
+	}
+}

@@ -27,12 +27,11 @@
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 230px 1fr 1fr 1fr;
+
 		gap: 15px;
 
 		@include mq("tablet", max) {
 			grid-template-columns: repeat(1, 1fr);
-			grid-auto-rows: 150px;
 		}
 	}
 
@@ -42,9 +41,46 @@
 		font-weight: 500;
 		font-size: 22px;
 		padding: 15px;
+		min-height: 140px;
 
 		@include mq("phone", max) {
 			font-size: 21px;
+			min-height: 115px;
+		}
+
+		&_2 {
+			@include mq("tablet", max) {
+				grid-column: 1 / 2;
+				grid-row: 6 /7;
+			}
+		}
+
+		&_4 {
+			@include mq("tablet", max) {
+				grid-column: 1 / 2;
+				grid-row: 3 /4;
+			}
+		}
+
+		&_5 {
+			@include mq("tablet", max) {
+				grid-column: 1 / 2;
+				grid-row: 7 /8;
+			}
+		}
+
+		&_7 {
+			@include mq("tablet", max) {
+				grid-column: 1 / 2;
+				grid-row: 4 /5;
+			}
+		}
+
+		&_8 {
+			@include mq("tablet", max) {
+				grid-column: 1 / 2;
+				grid-row: 8 /9;
+			}
 		}
 	}
 
@@ -52,6 +88,20 @@
 		object-fit: cover;
 		width: 100%;
 		height: 230px;
+
+		&_2 {
+			@include mq("tablet", max) {
+				grid-column: 1 / 2;
+				grid-row: 5 /6;
+			}
+		}
+
+		&_3 {
+			@include mq("tablet", max) {
+				grid-column: 1 / 2;
+				grid-row: 9 /10;
+			}
+		}
 	}
 
 	&__list-item {
