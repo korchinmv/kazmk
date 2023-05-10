@@ -40,3 +40,25 @@ links.forEach((link) => {
     });
   });
 });
+
+//BUTTON SCROLL TO TOP
+const buttonBack = document.querySelector(".button-back");
+const heroBlock = document.querySelector(".hero__wrapper");
+
+window.addEventListener("scroll", () => {
+  let scrollDistance = window.scrollY;
+
+  if (scrollDistance >= heroBlock.offsetHeight) {
+    buttonBack.style.opacity = 1;
+  } else {
+    buttonBack.style.opacity = 0;
+  }
+});
+
+//ACTIVE MENU
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    menuLinks.forEach((link) => link.classList.remove("header__link_active"));
+    e.target.classList.add("header__link_active");
+  });
+});

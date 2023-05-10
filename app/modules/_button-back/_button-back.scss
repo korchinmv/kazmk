@@ -8,8 +8,10 @@
 	justify-content: center;
 	position: fixed;
 	right: 30px;
-	bottom: 150px;
+	bottom: 40px;
 	z-index: 1;
+	opacity: 0;
+	transition: opacity ease-in-out 0.2s;
 
 	@include mq("tablet", max) {
 		display: flex;
