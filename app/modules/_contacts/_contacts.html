@@ -28,17 +28,17 @@
 
 					<label class="email-form__label" for="phone">
 						Телефон
-						<input class="email-form__input" name="phone" id="phone"
-							pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" type="tel"
-							required>
+						<input class="email-form__input" name="tel" id="tel" minlength="10" maxlength="18" type="tel" required>
 					</label>
 
 					<label for="textarea">
 						Оставьте сообщение...
-						<textarea class="email-form__textarea" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+						<textarea class="email-form__textarea" name="message" id="message" cols="30" rows="10"></textarea>
 					</label>
 
 					<button class="email-form__button button-submit" type="submit">Отправить</button>
+
+					<div class="email-form__confirm"></div>
 				</form>
 			</div>
 

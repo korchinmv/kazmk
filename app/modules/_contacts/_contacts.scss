@@ -153,9 +153,26 @@ iframe {
 
 	&__button {
 		align-self: flex-end;
+		margin-bottom: 20px;
 
 		@include mq("tablet-s", max) {
 			align-self: self-start;
+		}
+	}
+
+	&__confirm {
+		cursor: pointer;
+		opacity: 0;
+		visibility: hidden;
+		text-align: center;
+		transition: opacity ease-in-out 0.2s;
+
+		&_ok {
+			color: green;
+		}
+
+		&_fail {
+			color: red;
 		}
 	}
 }

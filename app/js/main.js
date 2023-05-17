@@ -62,3 +62,55 @@ menuLinks.forEach((link) => {
     e.target.classList.add("header__link_active");
   });
 });
+
+//SEND FORM
+const SERVICE_ID = "service_zvkbmhw";
+const TEMPLATE_ID = "template_0himd2l";
+const messageForm = document.querySelector(".email-form");
+const formButton = document.querySelector(".button-submit");
+const confirm = messageForm.querySelector(".email-form__confirm");
+
+const showConfirm = (element) => {
+  element.style.opacity = "1";
+  element.style.visibility = "visible";
+};
+
+const hideConfirm = (element) => {
+  element.style.opacity = "0";
+  element.style.visibility = "hidden";
+  element.classList.remove("email-form__confirm_fail");
+  element.classList.remove("email-form__confirm_ok");
+};
+
+const sendEmail = () => {
+  const params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    tel: document.getElementById("tel").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs
+    .send(SERVICE_ID, TEMPLATE_ID, params)
+    .then(() => {
+      messageForm.reset();
+      confirm.textContent = "Сообщение успешно отправлено!";
+      confirm.classList.add("email-form__confirm_ok");
+      showConfirm(confirm);
+    })
+    .catch((err) => {
+      confirm.textContent = "Сообщение не отправлено!";
+      confirm.classList.add("email-form__confirm_fail");
+      showConfirm(confirm);
+      console.log(err);
+    });
+};
+
+messageForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendEmail();
+});
+
+confirm.addEventListener("click", () => {
+  hideConfirm(confirm);
+});
